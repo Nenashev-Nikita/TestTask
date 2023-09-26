@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onBack">onBack</string>
+    <string name="hello_text">Приветствие</string>
+    <string name="dialog_title">Привет</string>
+    <string name="user_greetings_text">Добро пожаловать %1$s !!!</string>
+    <string name="cancel_button">Закрыть</string>
+</resources>

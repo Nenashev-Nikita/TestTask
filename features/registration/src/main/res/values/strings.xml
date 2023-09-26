@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_name">error_name</string>
+    <string name="error_surname">error_surname</string>
+    <string name="error_data">error_data</string>
+    <string name="error_password">error_password</string>
+    <string name="error_confirm_password">error the password does\'t match</string>
+
+</resources>

@@ -1,0 +1,55 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.example.testtask.data'
+    compileSdk 33
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kapt {
+        correctErrorTypes = true
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+    viewBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+
+    implementation Libs.Android.CoreKtx
+    implementation Libs.Android.AppCompat
+    implementation Libs.Android.ConstraintLayout
+    implementation Libs.Android.NavigationFragments
+    implementation Libs.Android.FragmentKtx
+    implementation Libs.Android.LifecycleViewModelKtx
+    implementation Libs.Android.DataStore
+
+    implementation Libs.Google.Material
+    implementation Libs.Google.Gson
+
+    implementation Libs.Squareup.Retrofit2
+    implementation Libs.Squareup.Logging
+    implementation Libs.Squareup.Okhtt
+    implementation Libs.Squareup.Converter
+
+    implementation Libs.Insert.Koin
+
+    implementation Libs.Github.Cicerone
+
+    kapt Libs.Android.Room
+}
