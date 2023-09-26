@@ -80,7 +80,7 @@ class RegistrationFragment : Fragment() {
 
                                 val str = DateFormat.getPatternInstance("dd.MM.yyyy").format(date)
                                 dateOfBirthEditText.setText(str)
-
+                                viewModel.checkData(data = date)
                             }
                         }
                     show(

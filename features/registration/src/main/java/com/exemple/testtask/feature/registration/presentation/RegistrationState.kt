@@ -7,7 +7,7 @@ sealed class RegistrationState {
     data class Content(
         val name: String,
         val surname: String,
-        val data: Long,
+        val data: Date?,
         val password: String,
         val confirm_password: String,
         val error: RegistrationErrorState,

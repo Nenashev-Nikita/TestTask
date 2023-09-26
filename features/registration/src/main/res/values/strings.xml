@@ -5,5 +5,10 @@
     <string name="error_data">error_data</string>
     <string name="error_password">error_password</string>
     <string name="error_confirm_password">error the password does\'t match</string>
+    <string name="button">Button</string>
+    <string name="confirm_password">confirm password</string>
+    <string name="password">password</string>
+    <string name="date_of_birth">date of birth</string>
+    <string name="surname">surname</string>
 
 </resources>

@@ -7,6 +7,8 @@ import androidx.lifecycle.viewModelScope
 import com.exemple.testtask.feature.registration.domain.entity.SaveEntity
 import com.exemple.testtask.feature.registration.domain.usecase.SaveNameUseCase
 import kotlinx.coroutines.launch
+import java.util.Calendar
+import java.util.Date
 
 class RegistrationViewModel(
     private val router: RegistrationNavigation,
@@ -23,7 +25,7 @@ class RegistrationViewModel(
 
     init {
         _state.value =
-            RegistrationState.Content("A", "A", 1, "g", "f", RegistrationErrorState.NotError)
+            RegistrationState.Content("A", "A", null, "g", "f", RegistrationErrorState.NotError)
     }
 
     fun checkName(str: String): Boolean {
@@ -53,15 +55,15 @@ class RegistrationViewModel(
         }
     }
 
-    fun checkData(str: String): Boolean {
+    fun checkData(data: Date): Boolean {
+        val calendar: Calendar = Calendar.getInstance()
         val currentState = _state.value as? RegistrationState.Content ?: return false
-        if (str.isEmpty()) return false
-        return if (str.length < 2) {
-            _state.value = currentState.copy(error = RegistrationErrorState.Surname)
+        if (data.toString().isEmpty()) return false
+        return if (data.time > calendar.time.time) {
+            _state.value = currentState.copy(error = RegistrationErrorState.Data)
             false
         } else {
-            _state.value =
-                currentState.copy(data = 1, error = RegistrationErrorState.NotErrorSurname)
+            _state.value = currentState.copy(data = data, error = RegistrationErrorState.NotErrorData)
             true
         }
     }

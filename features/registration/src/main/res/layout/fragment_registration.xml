@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center" />
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -22,6 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="5dp"
+            android:layout_marginTop="?actionBarSize"
             android:orientation="vertical">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -46,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:hint="surname"
+                android:hint="@string/surname"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -62,7 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:hint="date of birth"
+                android:hint="@string/date_of_birth"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -79,9 +80,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:hint="password"
+                android:hint="@string/password"
                 app:endIconMode="password_toggle"
-                app:endIconTint="@color/material_on_surface_stroke"
+                app:endIconTint="@color/material_on_surface_emphasis_medium"
                 app:errorEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -96,7 +97,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:hint="confirm password"
+                android:hint="@string/confirm_password"
                 app:endIconMode="password_toggle"
                 app:endIconTint="@color/material_on_surface_emphasis_medium"
                 app:errorEnabled="true">
@@ -111,8 +112,8 @@
                 android:id="@+id/go_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Button" />
+                android:text="@string/button" />
         </LinearLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
 </FrameLayout>

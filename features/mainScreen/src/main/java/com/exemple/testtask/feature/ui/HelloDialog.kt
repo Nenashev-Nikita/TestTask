@@ -27,7 +27,6 @@ class HelloDialog(private val viewModel: MainScreenViewModel) : DialogFragment()
             builder.setView(binding.root)
             getString(R.string.user_greetings_text, )
             binding.dialogHello.text = binding.root.resources.getString(R.string.user_greetings_text, currentState.Name)
-            builder.setTitle(R.string.dialog_title)
             builder.setPositiveButton(R.string.cancel_button) { dialog, _ ->
                 dialog.dismiss()
             }

@@ -4,9 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.exemple.testtask.feature.domain.entity.GetUserNameEntity
 import com.exemple.testtask.feature.domain.usecase.GetUserNameUseCase
-import com.github.terrakok.cicerone.Router
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 
